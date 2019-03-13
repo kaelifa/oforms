@@ -7,9 +7,9 @@
 {{#rows}}
   {{*#../isRepeatingSection}}<div class="oforms-repetition{{*#../../hasMultipleElements}} oforms-has-multiple{{/../../hasMultipleElements}}">{{/../isRepeatingSection}}
     {{#elements}}
-      <div{{*#uniqueName}} data-uname={{uniqueName}}{{/uniqueName}} class="oforms-row control-group{{*#validationFailure}} error{{/validationFailure}}">
+      <div{{*#uniqueName}} data-uname={{uniqueName}}{{/uniqueName}} class="oforms-row control-group form-group{{*#validationFailure}} error{{/validationFailure}}">
         {{*#label}}
-          <label class="control-label">
+          <label class="control-label form-check-label">
             {{label}}
             {{*#required}}<span class="oforms-required">&nbsp;*</span>{{/required}}
           </label>
