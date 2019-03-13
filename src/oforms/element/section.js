@@ -87,11 +87,11 @@ var SectionElementMethods = {
                 var output = [];
                 var validationFailure = validationFailures[e.name+nameSuffix];
                 if(renderForm && e._inlineGuidanceNote) {
-                    output.push('<a href="#" class="oforms-inline-guidance-view">i</a>');
+                    output.push('<div class="input-group-prepend"><a href="#" class="oforms-inline-guidance-view">i</a></div>');
                 }
                 e._pushRenderedHTML(instance, renderForm, context, nameSuffix, validationFailure, output);
                 if(renderForm && e._inlineGuidanceNote) {
-                    output.push('<div class="oforms-inline-guidance" style="display:none">');
+                    output.push('<div class="oforms-inline-guidance form-text text-muted" style="display:none">');
                     if(typeof(e._inlineGuidanceNote) === "string") {
                         output.push(paragraphTextToHTML(e._inlineGuidanceNote));
                     } else {
