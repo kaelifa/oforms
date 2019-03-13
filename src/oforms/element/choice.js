@@ -116,7 +116,7 @@ makeElementType("choice", {
             } else if(style === "multiple") {
                 // NOTE: Reuses radio-vertical styles
                 output.push('<div class="oforms-radio-vertical', additionalClass(this._class), '">');
-                var multipleHTMLStart = '<div class="form-check"><label class="radio form-check-input"><input type="checkbox" name="'+this.name+nameSuffix+',';
+                var multipleHTMLStart = '<div class="form-check"><label class="radio form-check-label"><input class="form-check-input" type="checkbox" name="'+this.name+nameSuffix+',';
                 var multipleNameIndex = 0;
                 html1 = function() { return multipleHTMLStart+(multipleNameIndex++)+'" value="'; };
                 htmlSelected = '" checked>';
@@ -134,7 +134,7 @@ makeElementType("choice", {
                 output.push('<', element, ' class="oforms-', style, additionalClass(this._class), '"');
                 this._outputCommonAttributes(output);
                 output.push('>');
-                html1 = '<div class="form-check"><label class="radio form-check-input"><input class="form-check-input" type="radio" name="'+this.name+nameSuffix+'" value="';
+                html1 = '<div class="form-check"><label class="radio form-check-label"><input class="form-check-input" type="radio" name="'+this.name+nameSuffix+'" value="';
                 htmlSelected = '" checked>';
                 html2 = '</label></div>';
                 endHTML = '</'+element+'>';
