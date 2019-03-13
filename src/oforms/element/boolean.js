@@ -35,8 +35,8 @@ makeElementType("boolean", {
                 this._outputCommonAttributes(output);
                 output.push(
                     '>',
-                        '<label class="radio form-check-label"><input class="form-check-input" type="radio" name="', this.name, nameSuffix, '" value="t"', ((value === true) ? ' checked' : ''),  '>', this._trueLabel,  '</label>',
-                        '<label class="radio form-check-label"><input class="form-check-input" type="radio" name="', this.name, nameSuffix, '" value="f"', ((value === false) ? ' checked' : ''), '>', this._falseLabel, '</label>',
+                        '<div class="form-check"><label class="radio form-check-label"><input class="form-check-input" type="radio" name="', this.name, nameSuffix, '" value="t"', ((value === true) ? ' checked' : ''),  '>', this._trueLabel,  '</label></div>',
+                        '<div class="form-check"><label class="radio form-check-label"><input class="form-check-input" type="radio" name="', this.name, nameSuffix, '" value="f"', ((value === false) ? ' checked' : ''), '>', this._falseLabel, '</label></div>',
                     '</span></div>'
                 );
             }
