@@ -27,7 +27,7 @@ makeElementType("file", {
             this._outputCommonAttributes(output);
             output.push('<span class="oforms-file-prompt"',
                 haveFile ? ' style="display:none"' : '',
-                '><a href="#">Upload file...</a><input type="file" name="', this.name, '.f', nameSuffix, '"></span>');
+                '><a href="#">Upload file...</a><input class="form-control-file" type="file" name="', this.name, '.f', nameSuffix, '"></span>');
             if(haveFile) {
                 output.push('<input type="hidden" name="', this.name, nameSuffix, '" value="',
                     escapeHTML(delegate.formFileElementEncodeValue(value)),
