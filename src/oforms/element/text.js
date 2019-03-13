@@ -39,7 +39,7 @@ makeElementType("text", {
             value = value.toString();
         }
         if(renderForm) {
-            output.push(this._htmlPrefix, '<input type="text" autocomplete="invalid-really-disable" name="', this.name, nameSuffix, '" value="', escapeHTML(value), '"');
+            output.push(this._htmlPrefix, '<input class="form-control" type="text" autocomplete="invalid-really-disable" name="', this.name, nameSuffix, '" value="', escapeHTML(value), '"');
             this._outputCommonAttributes(output, true /* with class */);
             output.push('>', this._htmlSuffix);
         } else {
