@@ -19,7 +19,9 @@
     <!-- ENDIF -->
 
     <!-- oForms CSS file -->
-    <!-- <link href="/appearance/oforms.css" rel="stylesheet" type="text/css"> -->
+    <!-- IF(oforms) -->
+    <link href="/appearance/oforms.css" rel="stylesheet" type="text/css">
+    <!-- ENDIF -->
     <link href="/oforms-demo-page.css" rel="stylesheet" type="text/css">
 
     <script src="/thirdparty/html5shiv.js"></script>
@@ -56,7 +58,7 @@
                 <div class="clear"></div>
             </header>
 
-            <form method="POST">
+            <form class="needs-validation" novalidate method="POST">
                 <script src="/test/form-defn.js"></script>
                 <script src="/test/test.js"></script>
                 <p><input type="submit" value="Submit form to server"> (for testing prevention of submission when file uploading in progress)</p>
@@ -67,13 +69,13 @@
             <p class="form-inline">
                 <input type="submit" value="Update" id="test_update" class="btn btn-primary">
                 &nbsp;&nbsp;&nbsp;
-                <label class="checkbox"><input type="checkbox" id="keep_instance" checked> Keep instance object</label>
+                <label class="checkbox form-check-label"><input class="form-check-input" type="checkbox" id="keep_instance" checked> Keep instance object</label>
                 &nbsp;&nbsp;&nbsp;
-                <label class="checkbox"><input type="checkbox" id="with_uname"> unames in HTML</label>
+                <label class="checkbox form-check-label"><input class="form-check-input" type="checkbox" id="with_uname"> unames in HTML</label>
                 &nbsp;&nbsp;&nbsp;
                 Render as a:
-                &nbsp;<label class="radio"><input type="radio" name="afterwards" value="rerender" checked> Form</label>
-                &nbsp;<label class="radio"><input type="radio" name="afterwards" value="renderdoc"> Document</label>
+                &nbsp;<label class="radio form-check-label"><input class="form-check-input" type="radio" name="afterwards" value="rerender" checked> Form</label>
+                &nbsp;<label class="radio form-check-label"><input class="form-check-input" type="radio" name="afterwards" value="renderdoc"> Document</label>
             </p>
         </section>
 
