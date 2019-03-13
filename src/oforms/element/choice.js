@@ -102,7 +102,7 @@ makeElementType("choice", {
                 groupingNext = -1;  // count of how many cells to go before outputting new cell. -1 means === 0 condition will never be met
             if(style === "select") {
                 // Select style
-                output.push('<select name="', this.name, nameSuffix, '"', emptyChoicesNeedFill);
+                output.push('<select class="form-control" name="', this.name, nameSuffix, '"', emptyChoicesNeedFill);
                 this._outputCommonAttributes(output, true /* with class */);
                 output.push('>');
                 // Only the select style uses a prompt
@@ -116,7 +116,7 @@ makeElementType("choice", {
             } else if(style === "multiple") {
                 // NOTE: Reuses radio-vertical styles
                 output.push('<div class="oforms-radio-vertical', additionalClass(this._class), '">');
-                var multipleHTMLStart = '<label class="radio"><input type="checkbox" name="'+this.name+nameSuffix+',';
+                var multipleHTMLStart = '<label class="radio form-check-input"><input type="checkbox" name="'+this.name+nameSuffix+',';
                 var multipleNameIndex = 0;
                 html1 = function() { return multipleHTMLStart+(multipleNameIndex++)+'" value="'; };
                 htmlSelected = '" checked>';
@@ -134,7 +134,7 @@ makeElementType("choice", {
                 output.push('<', element, ' class="oforms-', style, additionalClass(this._class), '"');
                 this._outputCommonAttributes(output);
                 output.push('>');
-                html1 = '<label class="radio"><input type="radio" name="'+this.name+nameSuffix+'" value="';
+                html1 = '<label class="radio form-check-input"><input class="form-check-input" type="radio" name="'+this.name+nameSuffix+'" value="';
                 htmlSelected = '" checked>';
                 html2 = '</label>';
                 endHTML = '</'+element+'>';
@@ -152,7 +152,7 @@ makeElementType("choice", {
                         c._used = true;
                         var o = [];
                         if(c.label) {
-                            o.push('<label class="control-label">', escapeHTML(textTranslate(c.label)), '</label>');
+                            o.push('<label class="control-label form-check-label">', escapeHTML(textTranslate(c.label)), '</label>');
                         }
                         if(c.explanation) {
                             o.push('<div class="oforms-explanation">', paragraphTextToHTML(textTranslate(c.explanation)), '</div>');
