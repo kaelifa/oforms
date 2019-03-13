@@ -102,7 +102,7 @@ makeElementType("choice", {
                 groupingNext = -1;  // count of how many cells to go before outputting new cell. -1 means === 0 condition will never be met
             if(style === "select") {
                 // Select style
-                output.push('<select class="form-control" name="', this.name, nameSuffix, '"', emptyChoicesNeedFill);
+                output.push('<select class="form-control col" name="', this.name, nameSuffix, '"', emptyChoicesNeedFill);
                 this._outputCommonAttributes(output, true /* with class */);
                 output.push('>');
                 // Only the select style uses a prompt
