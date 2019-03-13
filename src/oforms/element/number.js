@@ -17,7 +17,7 @@ var makeNumberElementType = function(typeName, validationRegExp, validationFailu
         _pushRenderedHTML: function(instance, renderForm, context, nameSuffix, validationFailure, output) {
             var value = this._getValueFromDoc(context);
             if(renderForm) {
-                output.push(this._htmlPrefix, '<input type="text" autocomplete="invalid-really-disable" class="oforms-number', additionalClass(this._class), '" name="', this.name, nameSuffix, '" value="');
+                output.push(this._htmlPrefix, '<input type="text" autocomplete="invalid-really-disable" class="oforms-number form-control', additionalClass(this._class), '" name="', this.name, nameSuffix, '" value="');
                 var enteredText = instance._rerenderData[this.name + nameSuffix];
                 if(enteredText) {
                     // Repeat what the user entered when validation failed
