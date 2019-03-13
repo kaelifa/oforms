@@ -17,7 +17,7 @@
         {{*#explanationHTML}}
           <div class="oforms-explanation form-text">{{{explanationHTML}}}</div>
         {{/explanationHTML}}
-        <div class="controls">
+        <div class="controls oforms_default{{*#explanationHTML}} input-group{{/explanationHTML}}">
           {{{html}}}
           {{*#validationFailure}}<div class="oforms-error-message help-block invalid-feedback">{{message||validationFailure.message}}</div>{{/validationFailure}}
         </div>
