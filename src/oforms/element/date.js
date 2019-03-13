@@ -72,7 +72,7 @@ makeElementType("date", {
             }
             output.push('><input type="hidden" name="', this.name, nameSuffix, '" value="', escapeHTML(value),
                 // Note that displayDate could be any old string recieved from the user
-                '"><input class="form-control" type="text" autocomplete="invalid-really-disable" name="', this.name, '.d', nameSuffix, '" class="oforms-date-input" value="', escapeHTML(displayDate || ''), '"');
+                '"><input type="text" autocomplete="invalid-really-disable" name="', this.name, '.d', nameSuffix, '" class="oforms-date-input form-control" value="', escapeHTML(displayDate || ''), '"');
             outputAttribute(output, ' placeholder="', this._placeholder);
             outputAttribute(output, ' data-oforms-note="', this._guidanceNote);
             output.push('></span>');
