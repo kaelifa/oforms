@@ -19,7 +19,7 @@
         {{/explanationHTML}}
         <div class="controls">
           {{{html}}}
-          {{*#validationFailure}}<div class="oforms-error-message help-block">{{message||validationFailure.message}}</div>{{/validationFailure}}
+          {{*#validationFailure}}<div class="oforms-error-message help-block invalid-feedback">{{message||validationFailure.message}}</div>{{/validationFailure}}
         </div>
       </div>
     {{/elements}}
