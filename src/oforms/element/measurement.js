@@ -54,7 +54,7 @@ makeElementType("measurement", {
                 value.units = previouslySubmittedUnits;
             }
         }
-        output.push('<span class="oforms-measurement row', additionalClass(this._class), '">');
+        output.push('<span class="oforms-measurement row m-0', additionalClass(this._class), '">');
         if(renderForm) {
             var validationFailures = instance._validationFailures;
             // Some day we might find a unit which needs the elements output in a different order.
