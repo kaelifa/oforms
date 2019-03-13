@@ -26,18 +26,18 @@ makeElementType("boolean", {
         var value = this._getValueFromDoc(context);
         if(renderForm) {
             if(this._checkboxStyle) {
-                output.push('<span class="oforms-checkbox', additionalClass(this._class), '"');
+                output.push('<div class="form-check"><span class="oforms-checkbox', additionalClass(this._class), '"');
                 this._outputCommonAttributes(output);
-                output.push('><label class="checkbox"><input type="checkbox" name="', this.name, nameSuffix, '" value="t"', ((value === true) ? ' checked' : ''),
-                    '>', this._cbLabel, '</span>');
+                output.push('><label class="checkbox form-check-label"><input class="form-check-input" type="checkbox" name="', this.name, nameSuffix, '" value="t"', ((value === true) ? ' checked' : ''),
+                    '>', this._cbLabel, '</span></div>');
             } else {
-                output.push('<span class="oforms-boolean', additionalClass(this._class), '"');
+                output.push('<div class="form-check"><span class="oforms-boolean', additionalClass(this._class), '"');
                 this._outputCommonAttributes(output);
                 output.push(
                     '>',
-                        '<label class="radio"><input type="radio" name="', this.name, nameSuffix, '" value="t"', ((value === true) ? ' checked' : ''),  '>', this._trueLabel,  '</label>',
-                        '<label class="radio"><input type="radio" name="', this.name, nameSuffix, '" value="f"', ((value === false) ? ' checked' : ''), '>', this._falseLabel, '</label>',
-                    '</span>'
+                        '<label class="radio form-check-label"><input class="form-check-input" type="radio" name="', this.name, nameSuffix, '" value="t"', ((value === true) ? ' checked' : ''),  '>', this._trueLabel,  '</label>',
+                        '<label class="radio form-check-label"><input class="form-check-input" type="radio" name="', this.name, nameSuffix, '" value="f"', ((value === false) ? ' checked' : ''), '>', this._falseLabel, '</label>',
+                    '</span></div>'
                 );
             }
         } else {
