@@ -87,7 +87,7 @@ var SectionElementMethods = {
                 var output = [];
                 var validationFailure = validationFailures[e.name+nameSuffix];
                 if(renderForm && e._inlineGuidanceNote) {
-                    output.push('<div class="input-group-prepend"><a href="#" class="oforms-inline-guidance-view input-group-text">i</a></div>');
+                    output.push('<a href="#" class="oforms-inline-guidance-view position-absolute" style="top:0; right:0;"><i class="fas fa-info-circle"></i></a>');
                 }
                 e._pushRenderedHTML(instance, renderForm, context, nameSuffix, validationFailure, output);
                 if(renderForm && e._inlineGuidanceNote) {
