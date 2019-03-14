@@ -163,7 +163,7 @@ makeElementType("choice", {
                 }
                 // Grouping?
                 if(this._radioGroups) {
-                    output.push('<table class="oforms-radio-grouping align-top"><tr><td>');
+                    output.push('<table class="oforms-radio-grouping align-top"><tr><td class="align-top">');
                     groupingNext = groupingCount = Math.ceil(choices.length / (1 * this._radioGroups));
                     endHTML = '</td></tr></table>' + endHTML;
                 }
@@ -184,7 +184,7 @@ makeElementType("choice", {
                 // Elements are [id,display]
                 _.each(choices, function(c) {
                     output.push(startHtml(c[0]), escapeHTML(c[0].toString()), (valueIsSelected(c[0]) ? htmlSelected : '">'), escapeHTML(c[1]), html2);
-                    if((--groupingNext) === 0) { output.push('</td><td>'); groupingNext = groupingCount; }
+                    if((--groupingNext) === 0) { output.push('</td><td class="align-top">'); groupingNext = groupingCount; }
                 });
             } else if(choicesArrayOfObjects(choices)) {
                 // Elements are objects with two named properties, defaulting to 'id' and 'name'
@@ -192,14 +192,14 @@ makeElementType("choice", {
                 _.each(choices, function(c) {
                     var id = c[idProp];
                     output.push(startHtml(id), escapeHTML(id.toString()), (valueIsSelected(id) ? htmlSelected : '">'), escapeHTML(c[displayProp]), html2);
-                    if((--groupingNext) === 0) { output.push('</td><td>'); groupingNext = groupingCount; }
+                    if((--groupingNext) === 0) { output.push('</td><td class="align-top">'); groupingNext = groupingCount; }
                 });
             } else {
                 // Elements are strings, used for both ID and display text
                 _.each(choices, function(c) {
                     var escaped = escapeHTML(c.toString());
                     output.push(startHtml(c), escaped, (valueIsSelected(c) ? htmlSelected : '">'), escaped, html2);
-                    if((--groupingNext) === 0) { output.push('</td><td>'); groupingNext = groupingCount; }
+                    if((--groupingNext) === 0) { output.push('</td><td class="align-top">'); groupingNext = groupingCount; }
                 });
             }
             output.push(endHTML);
