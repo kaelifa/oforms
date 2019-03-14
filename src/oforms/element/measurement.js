@@ -60,7 +60,7 @@ makeElementType("measurement", {
             // Some day we might find a unit which needs the elements output in a different order.
             // Will add a flag into the measurement info to trigger this.
             this._numberElement._pushRenderedHTML(instance, renderForm, value /* context */, nameSuffix, validationFailures[this._numberElement.name+nameSuffix], output);
-            output.push('<div class="input-group-append">');
+            output.push('<div class="oforms-unit input-group-append">');
             this._choiceElement._pushRenderedHTML(instance, renderForm, value /* context */, nameSuffix, validationFailures[this._choiceElement.name+nameSuffix], output);
             output.push('</div>');
         } else {

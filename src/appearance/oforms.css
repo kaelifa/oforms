@@ -61,6 +61,10 @@
     width: 80px;
 }
 
+.oforms-unit {
+    display: inline-block;
+}
+
 .oforms-delete-btn,
 .oforms-add-btn {
     font-size: 11px;
