@@ -163,7 +163,7 @@ makeElementType("choice", {
                 }
                 // Grouping?
                 if(this._radioGroups) {
-                    output.push('<table class="oforms-radio-grouping"><tr><td>');
+                    output.push('<table class="oforms-radio-grouping align-top"><tr><td>');
                     groupingNext = groupingCount = Math.ceil(choices.length / (1 * this._radioGroups));
                     endHTML = '</td></tr></table>' + endHTML;
                 }
