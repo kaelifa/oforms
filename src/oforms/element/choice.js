@@ -152,7 +152,7 @@ makeElementType("choice", {
                         c._used = true;
                         var o = [];
                         if(c.label) {
-                            o.push('<label class="control-label form-check-label">', escapeHTML(textTranslate(c.label)), '</label>');
+                            o.push('<label class="control-label form-check-label" for="">', escapeHTML(textTranslate(c.label)), '</label>');
                         }
                         if(c.explanation) {
                             o.push('<div class="oforms-explanation form-text">', paragraphTextToHTML(textTranslate(c.explanation)), '</div>');

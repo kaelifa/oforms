@@ -28,9 +28,9 @@ makeElementType("paragraph", {
             }
 
             // Textarea input
-            output.push('<textarea class="form-control" name="', this.name, nameSuffix, '" rows="', this._rows, '"');
+            output.push('<textarea class="form-control" name="', this.name, nameSuffix, '" id="', this.name, nameSuffix, '" rows="', this._rows, '"');
             this._outputCommonAttributes(output, true /* with class */);
-            output.push('>', escapeHTML(value), '</textarea>');
+            output.push('aria-labelledby="">', escapeHTML(value), '</textarea>');
 
             // Limits UI
             if(vc) {
