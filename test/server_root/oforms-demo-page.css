@@ -73,3 +73,7 @@ hr {
 .test_template input {
     width: 100px !important;
 }
+
+.invalid-feedback {
+    display: block;
+}
