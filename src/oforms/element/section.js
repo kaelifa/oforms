@@ -91,7 +91,7 @@ var SectionElementMethods = {
                 }
                 e._pushRenderedHTML(instance, renderForm, context, nameSuffix, validationFailure, output);
                 if(renderForm && e._inlineGuidanceNote) {
-                    output.push('<div class="oforms-inline-guidance form-text text-muted" style="display:none">');
+                    output.push('<div class="oforms-inline-guidance form-text text-muted alert alert-info w-100" style="display:none">');
                     if(typeof(e._inlineGuidanceNote) === "string") {
                         output.push(paragraphTextToHTML(e._inlineGuidanceNote));
                     } else {
