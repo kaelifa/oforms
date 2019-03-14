@@ -39,10 +39,10 @@ makeElementType("lookup", {
             output.push('<span class="oforms-lookup', additionalClass(this._class), '"');
             outputAttribute(output, ' id="', this._id);
             output.push('><input type="hidden" name="', this.name, nameSuffix, '" value="', escapeHTML(value),
-                '"><input type="text" name="', this.name, '.d', nameSuffix, '" autocomplete="invalid-really-disable" class="oforms-lookup-input form-control');
+                '"><input type="text" name="', this.name, '.d', nameSuffix, '" autocomplete="invalid-really-disable" class="oforms-lookup-input form-control alert alert-warning');
             if(value !== '') {
                 // Add additional class to flag that the lookup is valid
-                output.push(' oforms-lookup-valid');
+                output.push(' oforms-lookup-valid alert-success');
             }
             output.push('" value="', escapeHTML(displayName), '"');
             outputAttribute(output, ' placeholder="', this._placeholder);
