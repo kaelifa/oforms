@@ -41,7 +41,9 @@ makeElementType("text", {
         if(renderForm) {
             output.push(this._htmlPrefix, '<input class="form-control" type="text" autocomplete="invalid-really-disable" name="', this.name, nameSuffix, '" value="', escapeHTML(value), '"');
             this._outputCommonAttributes(output, true /* with class */);
-            output.push('>', this._htmlSuffix);
+
+            // TODO: populate for and name attributes
+            output.push('aria-labelledby="">', this._htmlSuffix);
         } else {
             output.push(this._htmlPrefix, escapeHTML(value), this._htmlSuffix);
         }
