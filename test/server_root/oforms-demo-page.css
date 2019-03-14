@@ -74,6 +74,7 @@ hr {
     width: 100px !important;
 }
 
+// TODO: this has been added as currently jquery and popper.js are dependancies for bootstrap 4 and are not installed in the project
 .invalid-feedback {
     display: block;
 }
