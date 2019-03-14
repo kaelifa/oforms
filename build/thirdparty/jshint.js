@@ -4309,7 +4309,7 @@ loop:   for (;;) {
                 o.push('<br><div class=function><i>' + f.line + '-' +
                         f.last + '</i> ' + (f.name || '') + '(' +
                         (f.param ? f.param.join(', ') : '') + ')</div>');
-                detail('<big><b>Unused</b></big>', f.unused);
+                detail('<big><strong>Unused</strong></big>', f.unused);
                 detail('Closure', f.closure);
                 detail('Variable', f['var']);
                 detail('Exception', f.exception);
